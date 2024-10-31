@@ -32,7 +32,7 @@ A Jekyll theme. [Demo :point_left:](http://scribble.muan.co/posts/scribble-the-j
 在cmd中按``Ctrl+C``结束当前执行命令，切换为清华镜像或者阿里云镜像源`https://mirrors.aliyun.com/rubygems/`再执行：
   ```
       # 添加 TUNA 源并移除默认源
-      $ gem sources --add https://mirrors.tuna.tsinghua.edu.cn/rubygems/ --    remove https://rubygems.org/
+      $ gem sources --add https://mirrors.tuna.tsinghua.edu.cn/rubygems/ --remove https://rubygems.org/
       # 列出已有源,应该只有 TUNA 一个
       $ gem sources -l
       *** CURRENT SOURCES ***
@@ -44,15 +44,15 @@ A Jekyll theme. [Demo :point_left:](http://scribble.muan.co/posts/scribble-the-j
 ```
 
 5. Run Jekyll: `bundle exec jekyll serve -w`
-- `boundler:command not found:jekyll Install missing gem executables with bundle install`手动安装jekyll：`gem install jekyll`
+- `boundler:command not found:jekyll Install missing gem executables with bundle install`：手动安装jekyll `gem install jekyll`
 
-6. Go to http://localhost:4000 for your site.
+6. Go to `http://localhost:4000` for your site.
 
 ---
 
 ## Make it yours
 
-1. Edit `_config.yml`, adn then rerun `jekyll serve -w`
+1. Edit `_config.yml`, and then rerun `jekyll serve -w`
 
 2. Change `about.md` for blog intro
 
