@@ -1,6 +1,9 @@
 ---
-title: About me 
-
+​---
+layout: page
+title: "About me"
+permalink: /about/
+​---
 ---
 
 Hi! This is Maya.
