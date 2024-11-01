@@ -62,21 +62,26 @@ A Jekyll theme. [Demo :point_left:](http://scribble.muan.co/posts/scribble-the-j
 1. Edit `_config.yml`, and then rerun `jekyll serve -w`	
    - run `jekyll serve -w`报错：```You have already activated public_suffix 6.0.1, but your Gemfile requires public_suffix 5.1.1. Prepending `bundle exec` to your command may solve this. (Gem::LoadError)```版本冲突问题，使用`bundle exec jekyll serve -w`进行本地预览
 2. Change `about.md` for blog intro
-3. For domain settings see [the guide from GitHub](https://help.github.com/articles/setting-up-a-custom-domain-with-pages)
-4. 修改内容后上传到Github仓库
+3. 修改内容后上传到Github仓库
    - `git add .`
    - `git commit -m "修改配置内容"`
    - `git push origin gh-pages`
 
-## 自定义域名
+### Custom domain
+
+For domain settings see [the guide from GitHub](https://help.github.com/articles/setting-up-a-custom-domain-with-pages)
 
 1. 我的域名是在阿里云购买并进行备案的。
 
-2. 在 GitHub 仓库的根目录下创建或修改 `CNAME` 文件，并在其中输入您的自定义域名。
+2. `github pages` 的 `CNAME` 文件配置：在 GitHub 仓库的根目录下创建或修改 `CNAME` 文件，并在其中输入您的自定义域名。
 
-3. 登录阿里云域名解析界面，进入您的域名提供商的 DNS 设置页面，添加以下记录：
+3. 阿里云服务器的域名解析设置。
 
-   - **A 记录**：将根域（如 `liumyblog.cn`）指向 GitHub Pages 的 IP 地址，这些 IP 是 GitHub Pages 官方提供的，将它们分别添加到您的域名的 A 记录中。分别为：
+   - **A 记录**：DNS服务器需要知道你的域名指向的 IP 地址，cmd中输入`ping -4 xxx.github.io`，即可找到你的Github Pages的IPv4地址。（如果不加-4，得到的是IPv6地址）
+
+     <img src="./images/image-20241101181222966.png" alt="image-20241101181222966" style="zoom:50%;" />
+
+     官方提供的IPv4地址如下，可以都添加上：
 
      ```
      185.199.108.153
@@ -84,8 +89,6 @@ A Jekyll theme. [Demo :point_left:](http://scribble.muan.co/posts/scribble-the-j
      185.199.110.153
      185.199.111.153
      ```
-
-   - **CNAME 记录**：如果您想让 `www.liumyblog.cn` 也指向您的博客，则可以创建一个 `CNAME` 记录，将 `www` 指向 `liumy-lay.github.io`。
 
 4. 更新`_config.yml`
 
