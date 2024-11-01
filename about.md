@@ -1,9 +1,5 @@
 ---
-​---
-layout: page
-title: "About me"
-permalink: /about/
-​---
+title: About me
 ---
 
 Hi! This is Maya.
