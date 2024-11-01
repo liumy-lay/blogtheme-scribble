@@ -1,8 +1,8 @@
 # ----------- CONFIGURABLE START -----------
 title: "Scribble"
 description: "Fake it till you make it."
-url: "https://liumy-lay.github.io" # Site url, without a slash at the end.
-baseurl: "/blogtheme-scribble"
+url: "https://liumyblog.cn" # Site url, without a slash at the end.
+baseurl: ""
 signoff: "Maya Liu" # Your name
 facebook_appid: # APP ID for like button, remove from /_includes/share.html if unwanted.
 google_analytics: # Set tracking, remove from /javascripts/basic.js if unwanted.

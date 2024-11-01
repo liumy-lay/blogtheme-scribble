@@ -70,13 +70,33 @@ A Jekyll theme. [Demo :point_left:](http://scribble.muan.co/posts/scribble-the-j
 
 ## 自定义域名
 
-1. 确保您已经购买了域名，并可以访问您的域名提供商的 DNS 设置页面。
+1. 我的域名是在阿里云购买并进行备案的。
 
 2. 在 GitHub 仓库的根目录下创建或修改 `CNAME` 文件，并在其中输入您的自定义域名。
 
-3. ### 
+3. 登录阿里云域名解析界面，进入您的域名提供商的 DNS 设置页面，添加以下记录：
 
-### 
+   - **A 记录**：将根域（如 `liumyblog.cn`）指向 GitHub Pages 的 IP 地址，这些 IP 是 GitHub Pages 官方提供的，将它们分别添加到您的域名的 A 记录中。分别为：
+
+     ```
+     185.199.108.153
+     185.199.109.153
+     185.199.110.153
+     185.199.111.153
+     ```
+
+   - **CNAME 记录**：如果您想让 `www.liumyblog.cn` 也指向您的博客，则可以创建一个 `CNAME` 记录，将 `www` 指向 `liumy-lay.github.io`。
+
+4. 更新`_config.yml`
+
+   在 GitHub 项目的 `_config.yml` 文件中，更新 `url` 字段以匹配您的自定义域名：
+
+   ```
+   url: "https://liumyblog.cn"
+   baseurl: ""  # 确保 baseurl 为空
+   ```
+
+5. 等待 DNS 生效后，就可以通过 `https://liumyblog.cn` 访问。
 
 ## The end
 
