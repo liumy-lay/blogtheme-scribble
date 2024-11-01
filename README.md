@@ -107,14 +107,17 @@ For domain settings see [the guide from GitHub](https://help.github.com/articles
 6. 注：
 
    - GitHub 这里会提示检测不到 `www.liumyblog.cn` 的 DNS 记录，导致 `www` 子域无法正确解析到 GitHub Pages。这个提示是因为 GitHub 默认会检查根域（`liumyblog.cn`）和 `www` 子域（`www.liumyblog.cn`）的 DNS 配置。由于不打算使用 `www.liumyblog.cn`，因此没有为 `www` 设置 CNAME 记录，导致 GitHub 检查 `www` 子域时发现配置不正确。<img src="./images/image-20241101203711356.png" alt="image-20241101203711356" style="zoom:50%;" />
+   
    - 如果希望消除此提示，可以在阿里云的 DNS 设置中为 `www` 子域添加一个 CNAME 记录指向 `liumy-lay.github.io`，添加新的 DNS 记录，这将让 `www.liumyblog.cn` 也指向 GitHub Pages，同时消除这个警告提示：
      - **主机记录**：`www`
      - **记录类型**：`CNAME`
      - **记录值**：`liumy-lay.github.io`
        ![image-20241101204140152](./images/image-20241101204140152.png)
-
-   - 阿里云SSL证书绑定域名，为网站添加HTTPS，教程：https://developer.aliyun.com/article/1595201![image-20241101212830073](./images/image-20241101212830073.png)
-
+   
+   - 阿里云SSL证书绑定域名，为网站添加HTTPS，教程：https://developer.aliyun.com/article/1595201
+   
+     ![image-20241101212830073](./images/image-20241101212830073.png)
+   
    
 
 ## The end
