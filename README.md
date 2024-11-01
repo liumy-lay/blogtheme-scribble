@@ -68,6 +68,16 @@ A Jekyll theme. [Demo :point_left:](http://scribble.muan.co/posts/scribble-the-j
    - `git commit -m "修改配置内容"`
    - `git push origin gh-pages`
 
+## 自定义域名
+
+1. 确保您已经购买了域名，并可以访问您的域名提供商的 DNS 设置页面。
+
+2. 在 GitHub 仓库的根目录下创建或修改 `CNAME` 文件，并在其中输入您的自定义域名。
+
+3. ### 
+
+### 
+
 ## The end
 
 Like it? [Tell me](http://twitter.com/muanchiou).<br/>
