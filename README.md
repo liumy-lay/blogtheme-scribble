@@ -58,11 +58,19 @@ A Jekyll theme. [Demo :point_left:](http://scribble.muan.co/posts/scribble-the-j
 
 ## Make it yours
 
-1. Edit `_config.yml`, and then rerun `jekyll serve -w`
+1. Edit `_config.yml`, and then rerun `jekyll serve -w`	
+   -  确保 `_config.yml` 中的 `baseurl` 和 `url` 配置正确：
+     - `url` 应该是 `https://<你的用户名>.github.io`。
+     - 如果你没有在子目录下部署项目，`baseurl` 应该留空（即 `baseurl: ""`）。
 
 2. Change `about.md` for blog intro
 
 3. For domain settings see [the guide from GitHub](https://help.github.com/articles/setting-up-a-custom-domain-with-pages)
+4. 修改配置内容并上传到Github
+   - `git add .`
+   - `git commit -m "修改配置内容"`
+   - `git push origin gh-pages`
+5. 
 
 ## The end
 
