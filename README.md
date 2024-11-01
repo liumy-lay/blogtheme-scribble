@@ -48,7 +48,6 @@ A Jekyll theme. [Demo :point_left:](http://scribble.muan.co/posts/scribble-the-j
          $ bundle install --verbose
      ```
    
-
 4. Run Jekyll: `bundle exec jekyll serve -w`
    - `boundler:command not found:jekyll Install missing gem executables with bundle install`：手动安装jekyll `gem install jekyll`
 
@@ -114,7 +113,7 @@ For domain settings see [the guide from GitHub](https://help.github.com/articles
      - **记录值**：`liumy-lay.github.io`
        ![image-20241101204140152](./images/image-20241101204140152.png)
 
-   
+   - 阿里云SSL证书绑定域名，为网站添加HTTPS，教程：https://developer.aliyun.com/article/1595201![image-20241101212830073](./images/image-20241101212830073.png)
 
    
 
