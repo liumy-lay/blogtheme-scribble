@@ -73,15 +73,11 @@ For domain settings see [the guide from GitHub](https://help.github.com/articles
 
 1. 我的域名是在阿里云购买并进行备案的。
 
-2. `github pages` 的 `CNAME` 文件配置：在 GitHub 仓库的根目录下创建或修改 `CNAME` 文件，并在其中输入您的自定义域名。
+2. `github pages` 的 `CNAME` 文件配置：在 GitHub 仓库的根目录下创建或修改 `CNAME` 文件，并在其中输入您的自定义域名`liumyblog.cn`。
 
 3. 阿里云服务器的域名解析设置。
 
-   - **A 记录**：DNS服务器需要知道你的域名指向的 IP 地址，cmd中输入`ping -4 xxx.github.io`，即可找到你的Github Pages的IPv4地址。（如果不加-4，得到的是IPv6地址）
-
-     <img src="./images/image-20241101181222966.png" alt="image-20241101181222966" style="zoom:50%;" />
-
-     官方提供的IPv4地址如下，可以都添加上：
+   - **A 记录**：DNS服务器需要知道你的域名指向的 IP 地址，cmd中输入`ping -4 xxx.github.io`，即可找到你的Github Pages的IPv4地址（如果不加-4，得到的是IPv6地址），多ping几次你会发现每次的IP地址都不一样，因为Github官方的IP地址一共有四个，这四个都要添加上：
 
      ```
      185.199.108.153
@@ -89,6 +85,14 @@ For domain settings see [the guide from GitHub](https://help.github.com/articles
      185.199.110.153
      185.199.111.153
      ```
+
+     <img src="./images/image-20241101181222966.png" alt="image-20241101181222966" style="zoom:50%;" />
+
+     ![image-20241101203029532](./images/image-20241101203029532.png)
+
+   - 最后要是实在不确定是否配置成功，去终端`git bash`，进入你的`xxxxx.github.io`文件夹，然后运行命令`nslookup 你的域名`，能看到四个IP地址就是配置成功。
+
+     ![image-20241101203150231](./images/image-20241101203150231.png)
 
 4. 更新`_config.yml`
 
@@ -99,7 +103,20 @@ For domain settings see [the guide from GitHub](https://help.github.com/articles
    baseurl: ""  # 确保 baseurl 为空
    ```
 
-5. 等待 DNS 生效后，就可以通过 `https://liumyblog.cn` 访问。
+5. 等待 DNS 生效（可能需要几个小时）后，就可以通过 `https://liumyblog.cn` 访问。
+
+6. 注：
+
+   - GitHub 这里会提示检测不到 `www.liumyblog.cn` 的 DNS 记录，导致 `www` 子域无法正确解析到 GitHub Pages。这个提示是因为 GitHub 默认会检查根域（`liumyblog.cn`）和 `www` 子域（`www.liumyblog.cn`）的 DNS 配置。由于不打算使用 `www.liumyblog.cn`，因此没有为 `www` 设置 CNAME 记录，导致 GitHub 检查 `www` 子域时发现配置不正确。<img src="./images/image-20241101203711356.png" alt="image-20241101203711356" style="zoom:50%;" />
+   - 如果希望消除此提示，可以在阿里云的 DNS 设置中为 `www` 子域添加一个 CNAME 记录指向 `liumy-lay.github.io`，添加新的 DNS 记录，这将让 `www.liumyblog.cn` 也指向 GitHub Pages，同时消除这个警告提示：
+     - **主机记录**：`www`
+     - **记录类型**：`CNAME`
+     - **记录值**：`liumy-lay.github.io`
+       ![image-20241101204140152](./images/image-20241101204140152.png)
+
+   
+
+   
 
 ## The end
 
